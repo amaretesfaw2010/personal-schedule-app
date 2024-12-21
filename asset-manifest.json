@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/personal-schedule-app/static/css/main.3a3ae386.css",
+    "main.js": "/personal-schedule-app/static/js/main.69feaee6.js",
+    "static/js/488.588fdd72.chunk.js": "/personal-schedule-app/static/js/488.588fdd72.chunk.js",
+    "index.html": "/personal-schedule-app/index.html",
+    "main.3a3ae386.css.map": "/personal-schedule-app/static/css/main.3a3ae386.css.map",
+    "main.69feaee6.js.map": "/personal-schedule-app/static/js/main.69feaee6.js.map",
+    "488.588fdd72.chunk.js.map": "/personal-schedule-app/static/js/488.588fdd72.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3a3ae386.css",
+    "static/js/main.69feaee6.js"
+  ]
+}
