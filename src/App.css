@@ -1,0 +1,275 @@
+﻿/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f2f5;
+    color: #333;
+}
+
+.App {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #00bcd4, #4caf50);
+}
+
+/* Header Styling */
+.App-header {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #4caf50;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Flex Layout for Forms */
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Input Section */
+.task-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    width: 45%; /* Adjust width to fit side by side */
+}
+
+input[type="text"],
+input[type="date"] {
+    padding: 10px 15px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+    input[type="text"]:focus,
+    input[type="date"]:focus {
+        border-color: #4caf50;
+    }
+
+button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    width: 100%;
+}
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+/* Task List Table */
+.task-list {
+    width: 45%; /* Adjust width to fit side by side */
+    text-align: left;
+    margin-top: 0;
+}
+
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .task-table th,
+    .task-table td {
+        padding: 12px 20px;
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    .task-table th {
+        background-color: #4caf50;
+        color: white;
+        font-weight: bold;
+    }
+
+    .task-table td {
+        background-color: #fff;
+        color: #333;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .task-table tr:nth-child(even) td {
+        background-color: #f9f9f9;
+    }
+
+    .task-table tr:hover td {
+        background-color: #f1f1f1;
+    }
+
+.remove-btn {
+    padding: 6px 12px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+    .remove-btn:hover {
+        background-color: #e60000;
+    }
+
+.task-table td .remove-btn {
+    font-size: 0.9rem;
+    width: 100px;
+    margin: 0;
+}
+
+/* No Tasks Message */
+p {
+    font-size: 1.2rem;
+    color: #888;
+    font-style: italic;
+    margin-top: 20px;
+}
+.auth-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .auth-container input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .auth-container button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .auth-container .auth-links {
+        margin-top: 10px;
+    }
+
+        .auth-container .auth-links span {
+            color: #4CAF50;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+            .auth-container .auth-links span:hover {
+                text-decoration: none;
+            }
+/* Notification Styles */
+.notifications {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.notification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notification-card {
+    background-color: #ffeb3b;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.notification-message {
+    font-weight: bold;
+}
+
+.notification-time {
+    font-size: 0.8em;
+    color: #555;
+}
+/* General reset for the <select> */
+select {
+    appearance: none; /* Remove default styling */
+    -webkit-appearance: none; /* Safari */
+    -moz-appearance: none; /* Firefox */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #fff; /* Background color */
+    padding: 8px 12px; /* Inner padding */
+    font-size: 16px; /* Font size */
+    color: #333; /* Text color */
+    cursor: pointer; /* Pointer cursor */
+    outline: none; /* Remove focus outline */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    width: 100%; /* Adjust width if necessary */
+}
+
+    /* Adding a hover effect */
+    select:hover {
+        border-color: #888; /* Change border color */
+    }
+
+    /* Adding focus style */
+    select:focus {
+        border-color: #007bff; /* Border color on focus */
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Glow effect */
+    }
+
+    /* Style the dropdown arrow */
+    select::-ms-expand {
+        display: none; /* Hide the dropdown arrow for IE */
+    }
+
+    select::after {
+        content: '▾'; /* Unicode arrow character */
+        position: absolute;
+        right: 12px;
+        pointer-events: none; /* Allow clicking through the arrow */
+    }
+
+    /* Optional styling for disabled state */
+    select:disabled {
+        background-color: #e9ecef; /* Light gray background */
+        cursor: not-allowed; /* Change cursor */
+    }
