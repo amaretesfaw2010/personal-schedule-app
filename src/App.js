@@ -25,31 +25,36 @@ function App() {
     };
 
     // Handle login logic
-    const handleLogin = async () => {
-        if (username && password) {
-            try {
-                const response = await fetch(`${API_BASE_URL}/login`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ username, password }),
-                });
-                const data = await response.json();
-                if (response.ok) {
-                    setToken(data.token);
-                    setLoggedIn(true);
-                    fetchTasks(data.token);
-                } else {
-                    alert(data.message || 'Login failed');
-                }
-            } catch (error) {
-                console.error('Error logging in:', error);
+   const [isLoading, setIsLoading] = useState(false);
+
+const handleLogin = async () => {
+    if (username && password) {
+        setIsLoading(true);  // Start loading
+        try {
+            const response = await fetch(`${API_BASE_URL}/login`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+            });
+            const data = await response.json();
+            if (response.ok) {
+                setToken(data.token);
+                setLoggedIn(true);
+                fetchTasks(data.token);
+            } else {
+                alert(data.message || 'Login failed');
             }
-        } else {
-            alert('Please enter both username and password.');
+        } catch (error) {
+            console.error('Error logging in:', error);
+        } finally {
+            setIsLoading(false);  // End loading
         }
-    };
+    } else {
+        alert('Please enter both username and password.');
+    }
+};
 
     // Handle sign-up logic
     const handleSignUp = async () => {
