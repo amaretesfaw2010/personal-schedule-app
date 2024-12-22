@@ -3,7 +3,6 @@ import './App.css'; // Include CSS for styling
 
 // Common API base URL
 const API_BASE_URL = 'https://personalschedule-backend.onrender.com'; // Correct API base URL
-dhmk
 function App() {
     const [tasks, setTasks] = useState([]);
     const [taskName, setTaskName] = useState('');
