@@ -25,6 +25,9 @@ const secretKey = process.env.JWT_SECRET || 'default_secret_key'; // Use environ
 
 app.use(cors());
 app.use(bodyParser.json());
+app.get('/', (req, res) => {
+    res.send('Welcome to the Personal Schedule Backend!');
+});
 
 // Connect to SQL Server
 sql.connect(config).then(pool => {
