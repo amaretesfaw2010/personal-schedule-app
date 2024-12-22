@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css'; // Include CSS for styling
 
 // Common API base URL
-const API_BASE_URL = 'http://localhost:4000';
+const API_BASE_URL = 'http://https://personalschedule-backend.onrender.com:10000';
 
 function App() {
     const [tasks, setTasks] = useState([]);
