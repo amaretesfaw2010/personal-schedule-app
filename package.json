@@ -1,7 +1,5 @@
 {
-  "engines": {
-  "node": "16.x"
-}
+ 
 
   "name": "personalschedule",
   "version": "0.1.0",
