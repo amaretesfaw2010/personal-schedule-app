@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css'; // Include CSS for styling
 
 // Common API base URL
-const API_BASE_URL = 'https://personalschedule-backend.onrender.com'  // Deployed backend
+const API_BASE_URL = 'https://personalschedule-backend.onrender.com' 
 
 
 function App() {
